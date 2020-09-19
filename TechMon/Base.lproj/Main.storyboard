@@ -1,24 +1,321 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="misaki_gothic.ttf">
+            <string>MisakiGothic</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Lobby View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LobbyViewController" customModule="TechMon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgimage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Bte-Lt-Lq8">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lobby.png" translatesAutoresizingMaskIntoConstraints="NO" id="VQ6-4m-TYA">
+                                <rect key="frame" x="0.0" y="84" width="414" height="400"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKj-L7-BPm">
+                                <rect key="frame" x="30" y="144" width="38" height="19"/>
+                                <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lv.15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXj-ot-Muw">
+                                <rect key="frame" x="346" y="144" width="48" height="19"/>
+                                <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wE2-Cs-9lt">
+                                <rect key="frame" x="77" y="678" width="260" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="5m7-qu-t04"/>
+                                    <constraint firstAttribute="width" constant="260" id="bXC-6S-vev"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="20"/>
+                                <state key="normal" title="冒険に行く" backgroundImage="gold_button.png">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="toButtle" destination="BYZ-38-t0r" eventType="touchUpInside" id="fTm-f6-ar9"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yusya.png" translatesAutoresizingMaskIntoConstraints="NO" id="kdY-aZ-KWb">
+                                <rect key="frame" x="98" y="127" width="219" height="204"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="スタミナ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0o5-wT-KeC">
+                                <rect key="frame" x="30" y="403" width="76" height="19"/>
+                                <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100/100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOb-t2-ytG">
+                                <rect key="frame" x="126" y="403" width="70" height="20"/>
+                                <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="sOb-t2-ytG" firstAttribute="leading" secondItem="0o5-wT-KeC" secondAttribute="trailing" constant="20" id="2tQ-ct-8XW"/>
+                            <constraint firstAttribute="bottom" secondItem="Bte-Lt-Lq8" secondAttribute="bottom" id="7iN-YU-Quc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bte-Lt-Lq8" secondAttribute="trailing" id="9Zf-m6-SdD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XXj-ot-Muw" secondAttribute="trailing" constant="20" id="Ifj-3R-aXT"/>
+                            <constraint firstItem="Bte-Lt-Lq8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Kui-Ua-A7i"/>
+                            <constraint firstItem="VQ6-4m-TYA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="MeM-rc-agm"/>
+                            <constraint firstItem="zKj-L7-BPm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="PPb-EU-VKR"/>
+                            <constraint firstItem="sOb-t2-ytG" firstAttribute="top" secondItem="0o5-wT-KeC" secondAttribute="top" id="PXG-h3-XrD"/>
+                            <constraint firstAttribute="trailing" secondItem="VQ6-4m-TYA" secondAttribute="trailing" id="VAF-aH-aHe"/>
+                            <constraint firstItem="Bte-Lt-Lq8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="d2L-3H-ah3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wE2-Cs-9lt" secondAttribute="bottom" constant="100" id="hfK-IS-WtB"/>
+                            <constraint firstItem="XXj-ot-Muw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="htP-4X-IdO"/>
+                            <constraint firstItem="zKj-L7-BPm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="kbx-sS-ffZ"/>
+                            <constraint firstItem="0o5-wT-KeC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="lcm-hQ-aev"/>
+                            <constraint firstItem="VQ6-4m-TYA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mDF-Ek-Tf3"/>
+                            <constraint firstItem="0o5-wT-KeC" firstAttribute="top" secondItem="zKj-L7-BPm" secondAttribute="bottom" constant="240" id="p85-RO-IyQ"/>
+                            <constraint firstItem="wE2-Cs-9lt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zE7-Kg-1NL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="zKj-L7-BPm" id="jVD-UW-n0N"/>
+                        <outlet property="staminaLabel" destination="sOb-t2-ytG" id="jQf-Mh-Vb9"/>
+                        <segue destination="QbL-Zb-KIJ" kind="presentation" identifier="toBattle" modalTransitionStyle="crossDissolve" id="T30-T8-swq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="98.4375"/>
+        </scene>
+        <!--Battle View Controller-->
+        <scene sceneID="0ok-Uy-RMG">
+            <objects>
+                <viewController id="QbL-Zb-KIJ" customClass="BattleViewController" customModule="TechMon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3jQ-2D-1za">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgimage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bzJ-ZW-N6D">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="battlebg.png" translatesAutoresizingMaskIntoConstraints="NO" id="6f3-60-SDQ">
+                                <rect key="frame" x="0.0" y="50" width="414" height="558"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bpe-Zl-jzr">
+                                <rect key="frame" x="30" y="80" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="Hxp-pb-EUG"/>
+                                    <constraint firstAttribute="height" constant="130" id="Im5-OW-uu5"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="pmV-Na-RJb">
+                                <rect key="frame" x="190" y="80" width="40" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppC-GT-QX4">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="33.5"/>
+                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfs-Zl-CVO">
+                                        <rect key="frame" x="0.0" y="33.5" width="40" height="33"/>
+                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQO-sk-JdC">
+                                        <rect key="frame" x="0.0" y="66.5" width="40" height="33.5"/>
+                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="TCM-SF-vvQ"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cc6-3m-D8E">
+                                <rect key="frame" x="290" y="110" width="70" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="400/400" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="seb-rP-Zg3">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="35"/>
+                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/35" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7YM-JI-DC7">
+                                        <rect key="frame" x="0.0" y="35" width="70" height="35"/>
+                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="dlR-aJ-OoX"/>
+                                </constraints>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iEg-Vo-Q2l">
+                                <rect key="frame" x="254" y="448" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="12s-U5-nzi"/>
+                                    <constraint firstAttribute="width" constant="130" id="qFw-uM-lvw"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="g4g-mK-lKM">
+                                <rect key="frame" x="30" y="428" width="70" height="150"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s19-iu-ceg">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="37.5"/>
+                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HP " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UaZ-JP-WdX">
+                                        <rect key="frame" x="0.0" y="37.5" width="70" height="37.5"/>
+                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MP " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YcL-yD-XPk">
+                                        <rect key="frame" x="0.0" y="75" width="70" height="37.5"/>
+                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TP     " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Apm-Wn-dQU">
+                                        <rect key="frame" x="0.0" y="112.5" width="70" height="37.5"/>
+                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="h9f-a2-37v"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="blQ-gV-3BK">
+                                <rect key="frame" x="15" y="658" width="384" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Db-0L-Lks">
+                                        <rect key="frame" x="0.0" y="0.0" width="114.5" height="80"/>
+                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="15"/>
+                                        <state key="normal" title="こうげき" backgroundImage="gold_button.png">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="attackAction" destination="QbL-Zb-KIJ" eventType="touchUpInside" id="aUm-2v-ACa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xy2-De-Phx">
+                                        <rect key="frame" x="134.5" y="0.0" width="115" height="80"/>
+                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
+                                        <state key="normal" title="ファイア" backgroundImage="gold_button.png">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6P-rk-3Bb">
+                                        <rect key="frame" x="269.5" y="0.0" width="114.5" height="80"/>
+                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
+                                        <state key="normal" title="ためる" backgroundImage="gold_button.png">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="7Tb-F0-9Is"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="tKs-vh-Ttk">
+                                <rect key="frame" x="120" y="468" width="70" height="110"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100/100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRV-6G-UuB">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="36.5"/>
+                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/20" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLX-Je-yKJ">
+                                        <rect key="frame" x="0.0" y="36.5" width="70" height="37"/>
+                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oHQ-jR-xVi">
+                                        <rect key="frame" x="0.0" y="73.5" width="70" height="36.5"/>
+                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="wth-Z5-pgt"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bpe-Zl-jzr" firstAttribute="leading" secondItem="hlP-vh-e5n" secondAttribute="leading" constant="30" id="3pJ-1D-H80"/>
+                            <constraint firstItem="hlP-vh-e5n" firstAttribute="bottom" secondItem="iEg-Vo-Q2l" secondAttribute="bottom" constant="230" id="4By-jn-3Ld"/>
+                            <constraint firstItem="hlP-vh-e5n" firstAttribute="bottom" secondItem="blQ-gV-3BK" secondAttribute="bottom" constant="70" id="5PG-3U-mAF"/>
+                            <constraint firstItem="hlP-vh-e5n" firstAttribute="trailing" secondItem="iEg-Vo-Q2l" secondAttribute="trailing" constant="30" id="89M-OC-CU5"/>
+                            <constraint firstItem="pmV-Na-RJb" firstAttribute="top" secondItem="hlP-vh-e5n" secondAttribute="top" constant="80" id="8s4-CK-FCf"/>
+                            <constraint firstItem="6f3-60-SDQ" firstAttribute="leading" secondItem="hlP-vh-e5n" secondAttribute="leading" id="Ew8-TY-iQB"/>
+                            <constraint firstItem="6f3-60-SDQ" firstAttribute="top" secondItem="hlP-vh-e5n" secondAttribute="top" constant="50" id="JbQ-Ho-YFd"/>
+                            <constraint firstItem="cc6-3m-D8E" firstAttribute="leading" secondItem="pmV-Na-RJb" secondAttribute="trailing" constant="60" id="Jsu-WW-HFp"/>
+                            <constraint firstItem="tKs-vh-Ttk" firstAttribute="leading" secondItem="g4g-mK-lKM" secondAttribute="trailing" constant="20" id="NKB-6U-Fns"/>
+                            <constraint firstItem="bzJ-ZW-N6D" firstAttribute="leading" secondItem="3jQ-2D-1za" secondAttribute="leading" id="Pys-Ti-FvV"/>
+                            <constraint firstItem="hlP-vh-e5n" firstAttribute="bottom" secondItem="6f3-60-SDQ" secondAttribute="bottom" constant="200" id="Qns-zr-Qhp"/>
+                            <constraint firstItem="hlP-vh-e5n" firstAttribute="trailing" secondItem="6f3-60-SDQ" secondAttribute="trailing" id="StY-h3-23h"/>
+                            <constraint firstItem="hlP-vh-e5n" firstAttribute="trailing" secondItem="blQ-gV-3BK" secondAttribute="trailing" constant="15" id="TI9-77-DdW"/>
+                            <constraint firstAttribute="trailing" secondItem="bzJ-ZW-N6D" secondAttribute="trailing" id="XL4-Rh-hdF"/>
+                            <constraint firstItem="cc6-3m-D8E" firstAttribute="top" secondItem="hlP-vh-e5n" secondAttribute="top" constant="110" id="dBl-fj-a1B"/>
+                            <constraint firstItem="pmV-Na-RJb" firstAttribute="leading" secondItem="bpe-Zl-jzr" secondAttribute="trailing" constant="30" id="h0E-SR-OLJ"/>
+                            <constraint firstItem="g4g-mK-lKM" firstAttribute="leading" secondItem="hlP-vh-e5n" secondAttribute="leading" constant="30" id="iU4-Us-MJj"/>
+                            <constraint firstAttribute="bottom" secondItem="bzJ-ZW-N6D" secondAttribute="bottom" id="iVd-Qf-9EM"/>
+                            <constraint firstItem="tKs-vh-Ttk" firstAttribute="bottom" secondItem="g4g-mK-lKM" secondAttribute="bottom" id="kjn-Pe-YGT"/>
+                            <constraint firstItem="bpe-Zl-jzr" firstAttribute="top" secondItem="hlP-vh-e5n" secondAttribute="top" constant="80" id="mlR-gu-BX5"/>
+                            <constraint firstItem="bzJ-ZW-N6D" firstAttribute="top" secondItem="3jQ-2D-1za" secondAttribute="top" id="tmR-9H-lil"/>
+                            <constraint firstItem="hlP-vh-e5n" firstAttribute="bottom" secondItem="g4g-mK-lKM" secondAttribute="bottom" constant="230" id="wcK-AZ-IPD"/>
+                            <constraint firstItem="blQ-gV-3BK" firstAttribute="leading" secondItem="hlP-vh-e5n" secondAttribute="leading" constant="15" id="zrg-HP-Mpu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hlP-vh-e5n"/>
+                    </view>
+                    <connections>
+                        <outlet property="enemyHPLabel" destination="seb-rP-Zg3" id="jUb-XR-0OQ"/>
+                        <outlet property="enemyImageView" destination="bpe-Zl-jzr" id="xVH-4Q-7h1"/>
+                        <outlet property="enemyMPLabel" destination="7YM-JI-DC7" id="DrC-ou-cdl"/>
+                        <outlet property="enemyNameLabel" destination="ppC-GT-QX4" id="2rT-0a-ffT"/>
+                        <outlet property="playerHPLabel" destination="fRV-6G-UuB" id="Bny-Oj-IUm"/>
+                        <outlet property="playerImageView" destination="iEg-Vo-Q2l" id="gcC-WT-5wk"/>
+                        <outlet property="playerMPLabel" destination="lLX-Je-yKJ" id="z1B-76-Ytc"/>
+                        <outlet property="playerNameLabel" destination="s19-iu-ceg" id="eEY-Hm-mpT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cem-jp-gwG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="954" y="98"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="battlebg.png" width="320" height="160"/>
+        <image name="bgimage.jpg" width="1280" height="960"/>
+        <image name="gold_button.png" width="800" height="245"/>
+        <image name="lobby.png" width="500" height="400"/>
+        <image name="yusya.png" width="56" height="56"/>
+    </resources>
 </document>
